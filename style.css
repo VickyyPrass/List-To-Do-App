@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: bisque;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.46);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.title {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(63, 63, 224);
+    color: #fff;
+    border-radius: 20px 20px 0 0;
+}
+
+.input-list {
+    width: 100%;
+    height: 15%;
+    display: flex;
+}
+
+.input-text {
+    width: 80%;
+    margin: 10px 0 10px 10px;
+    padding: 10px;
+    border: 1px solid #dbdbdb;
+    outline: none;
+    border-right: none;
+}
+
+.addBtn {
+    width: 60px;
+    height: 40px;
+    margin: 10px 10px 10px 0;
+    background-color: #f7b71d;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.addBtn:hover {
+    background-color: #ffa600;
+}
+
+.text-list {
+    width: 100%;
+    height: 60%;
+    padding: 0 10px 10px 10px;
+    overflow: auto;
+}
+
+
+/* DOM SELECTION */
+
+.taskContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.task {
+    width: 170px;
+    text-transform: capitalize;
+    margin-left: 10px;
+}
+
+i.fas.fa-check,
+i.fas.fa-trash-alt {
+    opacity: 0;
+    margin-right: 10px;
+}
+
+i.fas.fa-check:hover {
+    color: #0c9463;
+}
+
+i.fas.fa-trash-alt:hover {
+    color: #ff0000;
+}
+
+.taskContainer:hover i.fas.fa-check,
+.taskContainer:hover i.fas.fa-trash-alt {
+    opacity: 1;
+}
