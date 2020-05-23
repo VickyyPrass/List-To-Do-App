@@ -6,7 +6,7 @@ addBtn.addEventListener('click', addTask);
 
 function addTask() {
     if (inputText.value === '') {
-        alert('You Must Write Something !');
+        alert('Anda harus menulis sesuatu !');
     } else {
         const taskContainer = textList.appendChild(document.createElement("div"));
         const task = taskContainer.appendChild(document.createElement("p"));
@@ -25,7 +25,11 @@ function addTask() {
         doneBtn.addEventListener('click', doneTask);
 
         function deleteTask(e) {
-            e.target.parentElement.remove();
+            let tanya = true;
+            tanya = confirm('Apa anda yakin ingin menghapusnya ?');
+            if (tanya) {
+                e.target.parentElement.remove();
+            }
         }
 
         function doneTask(e) {
